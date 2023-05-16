@@ -11,8 +11,8 @@ train_dataloader = TrainDataLoader(
 	nbatches = 100,
 	threads = 8, 
 	sampling_mode = "normal", 
-	bern_flag = 1, 
-	filter_flag = 1, 
+	bern_flag = True, 
+	filter_flag = True, 
 	neg_ent = 25,
 	neg_rel = 0)
 
@@ -32,7 +32,7 @@ transe = TransE(
 model = NegativeSampling(
 	model = transe, 
 	loss = MarginLoss(margin = 5.0),
-	batch_size = train_dataloader.get_batch_size()
+	batch_size = train_dataloader.get_batch_size()  # type: ignore
 )
 
 # train the model

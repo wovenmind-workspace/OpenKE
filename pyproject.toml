@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "workspace"
+version = "0.1.0"
+description = ""
+authors = ["Alita Moore <github@alitamail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+torch = "^2.0.1"
+numpy = "^1.24.3"
+tqdm = "^4.65.0"
+torchvision = "^0.15.2"
+torchaudio = "^2.0.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
